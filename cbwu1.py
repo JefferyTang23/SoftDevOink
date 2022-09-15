@@ -32,3 +32,21 @@ def not_string(str):
   if len(str) > 2 and str[:3] == 'not':
     return str
   return 'not ' + str
+
+def missing_char(str, n):
+  return str[:n] + str[n+1:len(str)]
+
+def front_back(str):
+  if len(str) <= 1:
+    return str
+  first_char = str[0]
+  last_char = str[len(str)-1]
+  if len(str) == 2:
+    return last_char + first_char
+  return last_char + str[1:len(str)-1] + first_char
+
+def front3(str):
+  if len(str) < 3:
+    firstChars = str
+  firstChars = str[:3]
+  return firstChars + firstChars + firstChars
